@@ -68,7 +68,8 @@ namespace Microsoft.Graph
         public static Func<HttpMessageHandler> DefaultHttpHandler = () => {
             return new HttpClientHandler
             {
-                Proxy = Proxy
+                Proxy = Proxy,
+                AllowAutoRedirect = false
             };
         };
 
